@@ -41,6 +41,8 @@
             this.btnWithDrawal = new System.Windows.Forms.Button();
             this.txtWithdrawalAmount = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtReward = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtAccountName
@@ -89,7 +91,7 @@
             // 
             // txtBalance
             // 
-            this.txtBalance.Location = new System.Drawing.Point(338, 93);
+            this.txtBalance.Location = new System.Drawing.Point(369, 77);
             this.txtBalance.Name = "txtBalance";
             this.txtBalance.Size = new System.Drawing.Size(100, 20);
             this.txtBalance.TabIndex = 5;
@@ -97,7 +99,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(338, 74);
+            this.label3.Location = new System.Drawing.Point(274, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 13);
             this.label3.TabIndex = 6;
@@ -109,6 +111,7 @@
             this.txtDepositAmount.Name = "txtDepositAmount";
             this.txtDepositAmount.Size = new System.Drawing.Size(100, 20);
             this.txtDepositAmount.TabIndex = 7;
+            this.txtDepositAmount.TextChanged += new System.EventHandler(this.txtDepositAmount_TextChanged);
             // 
             // btnDeposit
             // 
@@ -118,6 +121,7 @@
             this.btnDeposit.TabIndex = 8;
             this.btnDeposit.Text = "Deposit";
             this.btnDeposit.UseVisualStyleBackColor = true;
+            this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
             // 
             // label4
             // 
@@ -136,6 +140,7 @@
             this.btnWithDrawal.TabIndex = 10;
             this.btnWithDrawal.Text = "Withdrawal";
             this.btnWithDrawal.UseVisualStyleBackColor = true;
+            this.btnWithDrawal.Click += new System.EventHandler(this.btnWithDrawal_Click);
             // 
             // txtWithdrawalAmount
             // 
@@ -154,11 +159,29 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Wells Fargo Account Creator";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(274, 110);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 13);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Reward Points";
+            // 
+            // txtReward
+            // 
+            this.txtReward.Location = new System.Drawing.Point(369, 103);
+            this.txtReward.Name = "txtReward";
+            this.txtReward.Size = new System.Drawing.Size(100, 20);
+            this.txtReward.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(596, 385);
+            this.Controls.Add(this.txtReward);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtWithdrawalAmount);
             this.Controls.Add(this.btnWithDrawal);
@@ -174,6 +197,7 @@
             this.Controls.Add(this.txtAccountName);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,6 +218,8 @@
         private System.Windows.Forms.Button btnWithDrawal;
         private System.Windows.Forms.TextBox txtWithdrawalAmount;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtReward;
     }
 }
 
