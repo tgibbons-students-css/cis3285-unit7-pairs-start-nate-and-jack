@@ -81,7 +81,27 @@ namespace AccountsForms
             txtReward.Text = RewardPoints.ToString();
         }
 
-        private void btnDeposit2_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDepositAmount2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtWithdrawalAmount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtWithdrawalAmount2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeposit2_Click_1(object sender, EventArgs e)
         {
             string accName = listBoxAccounts.SelectedItem.ToString();
             decimal amount = Decimal.Parse(txtDepositAmount2.Text);
@@ -94,7 +114,7 @@ namespace AccountsForms
             txtReward2.Text = RewardPoints.ToString();
         }
 
-        private void btnWithDrawal2_Click(object sender, EventArgs e)
+        private void btnWithDrawal2_Click_1(object sender, EventArgs e)
         {
             string accName = listBoxAccounts.SelectedItem.ToString();
             decimal amount = Decimal.Parse(txtWithdrawalAmount2.Text);
@@ -105,11 +125,6 @@ namespace AccountsForms
 
             int RewardPoints = accService.GetRewardPoints(accName);
             txtReward2.Text = RewardPoints.ToString();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

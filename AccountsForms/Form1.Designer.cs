@@ -159,6 +159,7 @@
             this.txtWithdrawalAmount.Name = "txtWithdrawalAmount";
             this.txtWithdrawalAmount.Size = new System.Drawing.Size(100, 20);
             this.txtWithdrawalAmount.TabIndex = 11;
+            this.txtWithdrawalAmount.TextChanged += new System.EventHandler(this.txtWithdrawalAmount_TextChanged);
             // 
             // label5
             // 
@@ -224,6 +225,7 @@
             this.txtWithdrawalAmount2.Name = "txtWithdrawalAmount2";
             this.txtWithdrawalAmount2.Size = new System.Drawing.Size(100, 20);
             this.txtWithdrawalAmount2.TabIndex = 22;
+            this.txtWithdrawalAmount2.TextChanged += new System.EventHandler(this.txtWithdrawalAmount2_TextChanged);
             // 
             // btnWithDrawal2
             // 
@@ -233,6 +235,7 @@
             this.btnWithDrawal2.TabIndex = 21;
             this.btnWithDrawal2.Text = "Withdrawal";
             this.btnWithDrawal2.UseVisualStyleBackColor = true;
+            this.btnWithDrawal2.Click += new System.EventHandler(this.btnWithDrawal2_Click_1);
             // 
             // btnDeposit2
             // 
@@ -242,6 +245,7 @@
             this.btnDeposit2.TabIndex = 20;
             this.btnDeposit2.Text = "Deposit";
             this.btnDeposit2.UseVisualStyleBackColor = true;
+            this.btnDeposit2.Click += new System.EventHandler(this.btnDeposit2_Click_1);
             // 
             // txtDepositAmount2
             // 
@@ -249,6 +253,7 @@
             this.txtDepositAmount2.Name = "txtDepositAmount2";
             this.txtDepositAmount2.Size = new System.Drawing.Size(100, 20);
             this.txtDepositAmount2.TabIndex = 19;
+            this.txtDepositAmount2.TextChanged += new System.EventHandler(this.txtDepositAmount2_TextChanged);
             // 
             // label9
             // 
