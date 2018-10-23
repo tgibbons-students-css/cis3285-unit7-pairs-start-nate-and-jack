@@ -42,6 +42,7 @@ namespace AccountsForms
             decimal balance = accService.GetAccountBalance(accName);
 
             txtBalance.Text = balance.ToString();
+            txtBalance2.Text = balance.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -78,6 +79,37 @@ namespace AccountsForms
 
             int RewardPoints = accService.GetRewardPoints(accName);
             txtReward.Text = RewardPoints.ToString();
+        }
+
+        private void btnDeposit2_Click(object sender, EventArgs e)
+        {
+            string accName = listBoxAccounts.SelectedItem.ToString();
+            decimal amount = Decimal.Parse(txtDepositAmount2.Text);
+            accService.Deposit(accName, amount);
+
+            decimal balance = accService.GetAccountBalance(accName);
+            txtBalance2.Text = balance.ToString();
+
+            int RewardPoints = accService.GetRewardPoints(accName);
+            txtReward2.Text = RewardPoints.ToString();
+        }
+
+        private void btnWithDrawal2_Click(object sender, EventArgs e)
+        {
+            string accName = listBoxAccounts.SelectedItem.ToString();
+            decimal amount = Decimal.Parse(txtWithdrawalAmount2.Text);
+            accService.Withdrawal(accName, amount);
+
+            decimal balance = accService.GetAccountBalance(accName);
+            txtBalance2.Text = balance.ToString();
+
+            int RewardPoints = accService.GetRewardPoints(accName);
+            txtReward2.Text = RewardPoints.ToString();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
